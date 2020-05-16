@@ -191,12 +191,20 @@ następujące polecenia:
     swoich następników na przeciwny.
     Przykładowe wyrazy: `'nie'`, `'bez'`,
     `'oprócz'`, `'prócz'`, `'poza'`, `'brak'`,
-    `'źle'`. Najlepiej byłoby dobrać ten zbiór
-    tak, by zmaksymalizować jakość
-    modeli. Nie przejmujemy się tym,
+    `'źle'`. Nie przejmujemy się tym,
     że niektóre z tych wyrazów mają też
-    znaczenia niezwiązane z negacją
-    ('przez nie' itp.)
+    znaczenia niezwiązane z negacją,
+    np. 'przez nie'. Uwaga: wpisywanie na hurra
+    do zbioru `NEGATION_START` wszystkiego,
+    co nam przyjdzie do głowy, prowadzi donikąd.
+    Należy raczej na próbę dodawać do zbioru
+    (początkowo pustego) kolejne pojedyncze wyrazy,
+    za każdym razem sprawdzać, czy wyraz się przydał
+    (poprawił jakość modelu), i odpowiednio
+    zostawiać go w zbiorze albo usuwać ze zbioru.
+    Takie podejście (mierzyć, mierzyć, mierzyć!)
+    powinno się zresztą stosować przy wszelkich
+    zagadnieniach *data science*.
 
     * Zmodyfikować funkcję `preprocess_tokens()`
     tak, by zamieniała wyrazy o przeciwnym
